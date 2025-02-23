@@ -2,7 +2,7 @@ import axios from "axios";
 import { WeatherData, ExtendedForecastData, ResumedForecastData } from '../api/weatherData';
 import { getNextSevenDays } from '../utils/GetDays';
 
-const API_KEY = "ef2a138ac931533017acc75b6662f085";
+const API_KEY = "7899c9ca42a409bff5e3fd77bdbfdc68";
 const FORECAST_URL = "https://api.openweathermap.org/data/2.5/forecast";
 const WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
 
