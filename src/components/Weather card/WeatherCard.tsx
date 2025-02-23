@@ -33,6 +33,7 @@ const WeatherCard: React.FC<IWeatherCardProps> = (IWeatherCardProps) => {
     else{
         const data=IWeatherCardProps.forecastData.days[IWeatherCardProps.selectedDay];
         console.log(data)
+        const description = Array.isArray(data.weather) ? data.weather[0].description : data.weather.description;
         return (
             <CurrentWeatherContainer>
                 <h2>Current Weather</h2>
@@ -41,7 +42,7 @@ const WeatherCard: React.FC<IWeatherCardProps> = (IWeatherCardProps) => {
                     <WeatherIcon code={data.weather.icon} />
                     <h3>{temperatureText(data.temp_max, IWeatherCardProps.unit)}-{temperatureText(data.temp_min, IWeatherCardProps.unit)}</h3>
                 </CurrentWeatherStatus>
-                <h4>{data.weather[0].description.charAt(0).toUpperCase() + data.weather[0].description.slice(1)}</h4>
+                <h4>{description.charAt(0).toUpperCase() + description.slice(1)}</h4>
                 <p>Rain: {data.rain} mm/h</p>
                 <p>Wind speed: {data.wind_speed} m/s</p>
                 <p>Humidity: {data.humidity} %</p>
