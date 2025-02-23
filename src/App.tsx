@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { getWeatherForecast, getCurrentWeather } from "./services/weatherService";
 import { WeatherData, ResumedForecastData } from './api/weatherData';
-import { MenuItem, Select, FormControl, InputLabel, TextField, Button, Alert } from "@mui/material"
+import { Alert } from "@mui/material"
 import CheckIcon from '@mui/icons-material/Check';
 import WeatherCard from './components/Weather card/WeatherCard';
 import WeatherMap from './components/Weather map/WeatherMap';
@@ -9,7 +9,6 @@ import SearchBar from './components/Input/SearchBar';
 import WeatherChart from './components/Weather chart/WeatherChart';
 import ForecastCard from './components/Forecast/ForecastCard';
 import UnitSelector from './components/Input/UnitSelector';
-import { dateFromUTC } from './utils/DateFromUTC';
 import { MainContainer, VerticalContainer } from "./components/styles";
 
 function App() {
